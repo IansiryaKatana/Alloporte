@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alloporte.com/sitemap.xml
