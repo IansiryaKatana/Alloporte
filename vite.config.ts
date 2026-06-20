@@ -1,5 +1,6 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
+import netlify from '@netlify/vite-plugin-tanstack-start'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
 import viteReact from '@vitejs/plugin-react'
@@ -19,6 +20,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     tanstackStart(),
+    netlify(),
     viteReact(),
   ],
 })
