@@ -13,6 +13,9 @@ export default defineConfig({
   server: {
     port: 3027,
   },
+  ssr: {
+    noExternal: ['gsap', '@gsap/react'],
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
