@@ -9,6 +9,7 @@ import { defineConfig } from 'vite'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
+  cacheDir: 'node_modules/.vite-dev',
   server: {
     port: 3027,
   },
@@ -16,6 +17,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+    dedupe: ['gsap'],
   },
   plugins: [
     tailwindcss(),

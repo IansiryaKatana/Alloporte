@@ -30,6 +30,17 @@ export const pexelsImages = {
   niceFrance: pexels(2901209),
   bordeauxFrance: pexels(18296667),
   lilleFrance: pexels(1396122),
+  /** Solution card backgrounds (3:4 portrait crops) */
+  cardAntiSquat: pexels(14845201, 900),
+  cardSteelDoor: pexels(3964672, 900),
+  cardAccessProtection: pexels(15222354, 900),
+  cardKeylessAccess: pexels(7578995, 900),
+  triggerBetweenTenants: pexels(259588, 900),
+  triggerDuringSale: pexels(1396122, 900),
+  triggerRenovation: pexels(2219024, 900),
+  triggerBreakIn: pexels(164425, 900),
+  triggerProbate: pexels(15222354, 900),
+  triggerCommercial: pexels(323705, 900),
 } as const
 
 /**

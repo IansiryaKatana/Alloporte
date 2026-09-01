@@ -15,6 +15,7 @@ import {
   type NavLink,
 } from '@/data/navigation'
 import { SectionLabel } from '@/components/layout/primitives'
+import { useFooterMotion, useMotionRef } from '@/hooks/use-section-motion'
 import { trackEvent } from '@/lib/utils'
 
 type SiteFooterProps = {
@@ -32,13 +33,13 @@ function FooterColumn({
 }) {
   return (
     <div>
-      <p className="mb-3 text-[8px] uppercase tracking-[0.14em] text-white/50">{title}</p>
+      <p className="mb-3 text-[12px] uppercase tracking-[0.12em] text-white/50 md:text-[13px]">{title}</p>
       <div className="flex flex-col gap-1">
         {links.map((link) => (
           <Link
             key={link.label.en}
             to={resolveNavHref(locale, link)}
-            className="py-1 text-[10px] uppercase tracking-[0.12em] text-white/70 hover:text-white"
+            className="py-1 text-[13px] uppercase tracking-[0.1em] text-white/70 hover:text-white md:text-[14px]"
           >
             {link.label[locale]}
           </Link>
@@ -49,19 +50,21 @@ function FooterColumn({
 }
 
 export function SiteFooter({ locale }: SiteFooterProps) {
+  const ref = useMotionRef<HTMLElement>()
+  useFooterMotion(ref)
   const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(
     locale === 'en' ? 'AlloPorte enquiry' : 'Demande AlloPorte',
   )}`
 
   return (
-    <footer className="overflow-hidden bg-[#030303] px-[var(--page-padding)] pt-7 text-white">
+    <footer ref={ref} className="overflow-hidden bg-[#030303] px-[var(--page-padding)] pt-7 text-white">
       <div className="grid gap-8 border-t border-white/15 pt-6 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-1">
           <SectionLabel light># alloporte</SectionLabel>
           <p className="mt-5 max-w-xs text-[11px] leading-snug text-white/60 text-desktop-min">
             {uiStrings.tagline[locale]}
           </p>
-          <p className="mt-8 text-[9px] uppercase tracking-[0.12em] text-white/35">
+          <p className="mt-8 text-[12px] uppercase tracking-[0.12em] text-white/35 md:text-[13px]">
             {uiStrings.copyright[locale]}
           </p>
         </div>
@@ -72,7 +75,7 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       </div>
       <div className="mt-6 grid gap-4 border-t border-white/10 py-6 md:grid-cols-2">
         <FooterColumn title={uiStrings.legal[locale]} links={legalLinks} locale={locale} />
-        <div className="flex flex-col justify-end gap-2 text-[11px] text-white/60">
+        <div className="flex flex-col justify-end gap-2 text-[14px] text-white/60 md:text-[15px]">
           <a
             href={phoneHref}
             onClick={() => trackEvent('footer_phone_click')}
@@ -86,7 +89,8 @@ export function SiteFooter({ locale }: SiteFooterProps) {
       <a
         href={mailto}
         onClick={() => trackEvent('footer_email_click')}
-        className="mask-reveal mt-8 block pb-2 text-[clamp(3rem,12vw,10rem)] font-light leading-[0.78] tracking-[-0.08em] text-white"
+        data-motion="heading"
+        className="mt-8 block pb-2 text-[clamp(3rem,12vw,10rem)] font-light leading-[0.78] tracking-[-0.08em] text-white"
       >
         {contactEmail}
       </a>

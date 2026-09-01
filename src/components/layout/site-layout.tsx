@@ -3,6 +3,7 @@ import type { ReactNode } from 'react'
 import type { Locale } from '@/i18n/types'
 import { phoneHref, whatsappHref } from '@/data/contact'
 import { SiteFooter } from '@/components/layout/site-footer'
+import { StickySiteHeader } from '@/components/layout/site-header'
 import { trackEvent } from '@/lib/utils'
 
 function WhatsAppIcon({ className }: { className?: string }) {
@@ -47,6 +48,7 @@ export function SiteLayout({
 }) {
   return (
     <div className="bg-background text-foreground">
+      <StickySiteHeader locale={locale} />
       <main>{children}</main>
       <SiteFooter locale={locale} />
       <FloatingActions />

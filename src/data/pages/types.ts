@@ -1,9 +1,24 @@
 import type { CityId, Locale, PageId } from '@/i18n/types'
 
+export type DarkFeatureContent = {
+  label: string
+  heading: string
+  body: string
+  image: string
+  imageAlt: string
+  cta?: { label: string; pageId: PageId }
+  sideTitle?: string
+  sideBody?: string
+}
+
+export type CaseStudyTabId = 'portfolio' | 'commercial' | 'residential'
+
 export type CardItem = {
   number?: string
   title: string
   description: string
+  image?: string
+  imageAlt?: string
 }
 
 export type FaqItem = {
@@ -51,6 +66,7 @@ export type PageSection =
       heading?: string
       items: CardItem[]
       columns?: 2 | 3 | 4
+      carousel?: boolean
     }
   | {
       type: 'dark-feature'
@@ -62,6 +78,10 @@ export type PageSection =
       cta?: { label: string; pageId: PageId }
       sideTitle?: string
       sideBody?: string
+    }
+  | {
+      type: 'case-study-tabs'
+      tabs: Record<CaseStudyTabId, DarkFeatureContent[]>
     }
   | {
       type: 'steps'

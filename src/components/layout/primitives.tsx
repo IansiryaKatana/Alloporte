@@ -13,8 +13,9 @@ export function SectionLabel({
 }) {
   return (
     <p
+      data-motion="label"
       className={cn(
-        'text-[7px] font-medium uppercase tracking-[0.18em] text-desktop-min',
+        'text-[11px] font-medium uppercase tracking-[0.16em] md:text-sm',
         light ? 'text-white/60' : 'text-neutral-500',
         className,
       )}

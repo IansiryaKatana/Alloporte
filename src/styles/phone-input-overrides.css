@@ -11,6 +11,13 @@
   --PhoneInputCountryFlag-height: 1.1rem;
 }
 
+@media (min-width: 768px) {
+  .phone-input--public.PhoneInput {
+    font-size: 15px;
+    padding: 0.65rem 0.85rem;
+  }
+}
+
 .phone-input--public.PhoneInput .PhoneInputInput {
   flex: 1;
   min-width: 0;

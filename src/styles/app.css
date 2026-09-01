@@ -39,13 +39,13 @@
 }
 
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
 body {
   min-width: 320px;
   margin: 0;
-  overflow-x: hidden;
 }
 
 @layer base {
@@ -73,43 +73,14 @@ img {
   filter: brightness(0.82) saturate(0.88) contrast(1.08);
 }
 
-.reveal {
-  animation: reveal-up 900ms cubic-bezier(0.16, 1, 0.3, 1) both;
+[data-motion='heading'] {
+  overflow: visible;
+  text-wrap: pretty;
 }
 
-.hero-image-motion {
-  animation: hero-settle 1400ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.mask-reveal {
-  clip-path: inset(0 100% 0 0);
-  animation: mask-open 1300ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-@keyframes reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes hero-settle {
-  from {
-    transform: scale(1.06);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes mask-open {
-  to {
-    clip-path: inset(0 0 0 0);
-  }
+[data-motion='heading'] .split-word,
+[data-motion='heading'] [aria-hidden='true'] {
+  will-change: transform;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -120,13 +91,18 @@ img {
     scroll-behavior: auto !important;
     transition-duration: 1ms !important;
   }
+
+  [data-motion] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 
 @layer utilities {
   .text-desktop-min {
     @media (min-width: 768px) {
-      font-size: 18px;
-      line-height: 1.35;
+      font-size: 18px !important;
+      line-height: 1.45 !important;
     }
   }
 }
