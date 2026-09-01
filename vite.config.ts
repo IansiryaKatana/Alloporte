@@ -12,6 +12,9 @@ export default defineConfig({
   cacheDir: 'node_modules/.vite-dev',
   server: {
     port: 3027,
+    watch: {
+      ignored: ['**/.netlify/**'],
+    },
   },
   ssr: {
     noExternal: ['gsap', '@gsap/react'],

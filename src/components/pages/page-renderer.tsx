@@ -254,7 +254,7 @@ function PageHero({ locale, hero }: { locale: Locale; hero: PageContent['hero'] 
         </SectionLabel>
         <h1
           data-motion="heading"
-          className="max-w-4xl text-[clamp(2rem,8vw,5.5rem)] font-light leading-[0.88] tracking-[-0.06em]"
+          className="max-w-4xl text-[clamp(2rem,8vw,5.5rem)] font-light leading-[1.05] tracking-[-0.06em]"
         >
           {hero.h1}
         </h1>

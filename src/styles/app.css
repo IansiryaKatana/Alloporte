@@ -78,9 +78,22 @@ img {
   text-wrap: pretty;
 }
 
-[data-motion='heading'] .split-word,
-[data-motion='heading'] [aria-hidden='true'] {
+[data-motion='heading'] .split-word {
+  padding-top: 0.22em;
+  padding-bottom: 0.28em;
+  margin-top: -0.22em;
+  margin-bottom: -0.28em;
+  vertical-align: bottom;
   will-change: transform;
+}
+
+[data-motion='heading'] .split-word-mask {
+  overflow: clip;
+  padding-top: 0.22em;
+  padding-bottom: 0.28em;
+  margin-top: -0.22em;
+  margin-bottom: -0.28em;
+  vertical-align: bottom;
 }
 
 @media (prefers-reduced-motion: reduce) {

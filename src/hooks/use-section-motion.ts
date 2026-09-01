@@ -21,6 +21,7 @@ function splitHeading(heading: HTMLElement) {
       type: 'words',
       aria: 'auto',
       mask: 'words',
+      wordsClass: 'split-word',
     })
   } catch {
     return null
