@@ -19,6 +19,7 @@ import {
 } from '@/lib/whatsapp'
 import { PhoneInputField } from '@/components/ui/phone-input-field'
 import { CardsCarousel } from '@/components/pages/cards-carousel'
+import { HomeHeroScroll } from '@/components/pages/home-hero-scroll'
 import { cn, trackEvent } from '@/lib/utils'
 
 type PageRendererProps = {
@@ -972,7 +973,11 @@ function TestimonialsSection({
 export function PageRenderer({ locale, content }: PageRendererProps) {
   return (
     <>
-      <PageHero locale={locale} hero={content.hero} />
+      {content.id === 'home' ? (
+        <HomeHeroScroll locale={locale} hero={content.hero} />
+      ) : (
+        <PageHero locale={locale} hero={content.hero} />
+      )}
       {content.sections.map((section, i) => (
         <SectionRenderer key={`${section.type}-${i}`} locale={locale} section={section} index={i} />
       ))}

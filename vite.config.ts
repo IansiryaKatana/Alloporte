@@ -1,8 +1,8 @@
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import netlify from '@netlify/vite-plugin-tanstack-start'
 import tailwindcss from '@tailwindcss/vite'
 import { tanstackStart } from '@tanstack/react-start/plugin/vite'
+import { nitro } from 'nitro/vite'
 import viteReact from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     port: 3027,
     watch: {
-      ignored: ['**/.netlify/**'],
+      ignored: ['**/.netlify/**', '**/.vercel/**'],
     },
   },
   ssr: {
@@ -28,7 +28,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     tanstackStart(),
-    netlify(),
+    nitro(),
     viteReact(),
   ],
 })
