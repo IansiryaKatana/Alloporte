@@ -14,7 +14,7 @@ import {
   uiStrings,
   type NavLink,
 } from '@/data/navigation'
-import { SectionLabel } from '@/components/layout/primitives'
+import { BrandLogo } from '@/components/layout/brand-logo'
 import { useFooterMotion, useMotionRef } from '@/hooks/use-section-motion'
 import { trackEvent } from '@/lib/utils'
 
@@ -60,7 +60,9 @@ export function SiteFooter({ locale }: SiteFooterProps) {
     <footer ref={ref} className="overflow-hidden bg-[#030303] px-[var(--page-padding)] pt-7 text-white">
       <div className="grid gap-8 border-t border-white/15 pt-6 md:grid-cols-2 lg:grid-cols-5">
         <div className="lg:col-span-1">
-          <SectionLabel light># alloporte</SectionLabel>
+          <Link to={pagePath(locale, 'home')} aria-label="AlloPorte home" className="inline-flex">
+            <BrandLogo onDark className="h-8 md:h-9" />
+          </Link>
           <p className="mt-5 max-w-xs text-[11px] leading-snug text-white/60 text-desktop-min">
             {uiStrings.tagline[locale]}
           </p>

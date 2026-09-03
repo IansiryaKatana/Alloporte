@@ -10,6 +10,7 @@ import {
   uiStrings,
 } from '@/data/navigation'
 import { Button } from '@/components/ui/button'
+import { BrandLogo } from '@/components/layout/brand-logo'
 import { BlueDot } from '@/components/layout/primitives'
 import { cn } from '@/lib/utils'
 
@@ -39,9 +40,7 @@ function MobileMenu({
       />
       <div className="absolute inset-x-0 bottom-0 max-h-[85vh] overflow-y-auto rounded-t-lg bg-white p-[var(--page-padding)] pb-0 shadow-[0_-16px_45px_rgba(0,0,0,0.12)]">
         <div className="mb-4 flex items-center justify-between">
-          <p className="text-[13px] uppercase tracking-[0.12em] text-muted-foreground">
-            {uiStrings.menu[locale]}
-          </p>
+          <BrandLogo className="h-6 md:h-7" />
           <button
             type="button"
             aria-label={uiStrings.close[locale]}
@@ -119,13 +118,10 @@ function HeaderNav({
       <div className="flex items-center justify-between py-3">
         <Link
           to={pagePath(locale, 'home')}
-          className={cn(
-            'text-[13px] uppercase tracking-[0.12em] md:text-sm',
-            light ? 'text-white/85' : 'text-foreground',
-          )}
+          className="inline-flex items-center"
           aria-label="AlloPorte home"
         >
-          AP / 26
+          <BrandLogo onDark={light} />
         </Link>
         <nav className="hidden items-center gap-5 lg:flex">
           {headerNav.map((group) => (

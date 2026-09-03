@@ -7,7 +7,7 @@ import { SiteHeader } from '@/components/layout/site-header'
 import { BlueDot, PageContainer, SectionLabel } from '@/components/layout/primitives'
 import { Button } from '@/components/ui/button'
 import { gsap, useGSAP, ScrollTrigger, SplitText } from '@/lib/gsap-client'
-import { createHeroScrollVideo } from '@/lib/hero-scroll-video'
+import { createHeroScrollVideo, HERO_SCROLL_POSTER } from '@/lib/hero-scroll-video'
 
 type HomeHeroScrollProps = {
   locale: Locale
@@ -136,7 +136,7 @@ export function HomeHeroScroll({ locale, hero }: HomeHeroScrollProps) {
     <section ref={pinRef} className="relative bg-black text-white">
       <div ref={stageRef} className="relative h-svh overflow-hidden">
         <img
-          src="/hero-scroll/poster.webp"
+          src={HERO_SCROLL_POSTER}
           alt={hero.imageAlt}
           className="architectural-image absolute inset-0 h-full w-full object-cover"
           fetchPriority="high"

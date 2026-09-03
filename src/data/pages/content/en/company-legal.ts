@@ -1,4 +1,4 @@
-import { caseStudyImages, ctaImages, pexelsImages } from '@/data/images'
+import { caseStudyImages, ctaImages, pexelsImages, heroImages } from '@/data/images'
 import type { PageContent } from '@/data/pages/types'
 
 const quoteCta = { label: 'Request a Quote', pageId: 'quote' as const }
@@ -13,8 +13,8 @@ export const franceEn: PageContent = {
     label: '# nationwide',
     h1: 'Anti-Squat Doors and Access Protection Across France',
     subtitle: 'Priority deployment in major cities. Nationwide coverage for portfolio and rural assets.',
-    image: pexelsImages.franceMap,
-    imageAlt: 'France landscape aerial view',
+    image: heroImages.france,
+    imageAlt: 'Anti-squat steel door securing a vacant commercial unit in France',
     primaryCta: quoteCta,
   },
   sections: [
@@ -68,7 +68,7 @@ export const franceEn: PageContent = {
       ctaLabel: 'Request a Quote',
       ctaPageId: 'quote',
       image: ctaImages.franceNationwide,
-      imageAlt: 'Paris skyline representing France service coverage',
+      imageAlt: 'Anti-squat door securing a vacant commercial unit in France',
     },
   ],
   internalLinks: [
@@ -158,8 +158,8 @@ export const aboutEn: PageContent = {
     label: '# about',
     h1: 'About AlloPorte',
     subtitle: 'Vacant property protection with technical clarity and bilingual advisory.',
-    image: pexelsImages.teamAdvisor,
-    imageAlt: 'AlloPorte advisory team',
+    image: heroImages.about,
+    imageAlt: 'AlloPorte anti-squat door installed in a vacant building lobby',
     primaryCta: quoteCta,
   },
   sections: [
@@ -198,8 +198,8 @@ export const reviewsEn: PageContent = {
     label: '# reviews',
     h1: 'Client Reviews',
     subtitle: 'Trusted by owners, landlords, and asset managers across France.',
-    image: pexelsImages.testimonial,
-    imageAlt: 'Satisfied property owner',
+    image: heroImages.reviews,
+    imageAlt: 'Anti-squat door protecting a vacant Parisian property',
     primaryCta: quoteCta,
   },
   sections: [
@@ -249,7 +249,7 @@ export const privacyEn: PageContent = {
   hero: {
     label: '# legal',
     h1: 'Privacy Policy',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Legal documentation',
   },
   sections: [
@@ -272,7 +272,7 @@ export const cookieEn: PageContent = {
   hero: {
     label: '# legal',
     h1: 'Cookie Policy',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Website cookies policy',
   },
   sections: [
@@ -294,7 +294,7 @@ export const termsEn: PageContent = {
   hero: {
     label: '# legal',
     h1: 'Terms of Service',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Terms of service',
   },
   sections: [
@@ -316,7 +316,7 @@ export const legalNoticeEn: PageContent = {
   hero: {
     label: '# mentions légales',
     h1: 'Legal Notice',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Legal notice',
   },
   sections: [

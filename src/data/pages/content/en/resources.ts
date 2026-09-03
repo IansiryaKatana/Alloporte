@@ -1,4 +1,4 @@
-import { pexelsImages, ctaImages } from '@/data/images'
+import { pexelsImages, ctaImages, heroImages } from '@/data/images'
 import type { PageContent } from '@/data/pages/types'
 
 const quoteCta = { label: 'Request a Quote', pageId: 'quote' as const }
@@ -13,8 +13,8 @@ export const techSpecsEn: PageContent = {
     label: '# specifications',
     h1: 'Technical Specifications, Standards and Certification Scope',
     subtitle: 'Clear, honest documentation — what is certified vs configurable on your project.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Steel security door detail',
+    image: heroImages.technical,
+    imageAlt: 'Steel anti-squat door frame and lock detail on a vacant opening',
     primaryCta: { label: 'Download specification sheet', pageId: 'quote' },
   },
   sections: [
@@ -98,8 +98,8 @@ export const lawEn: PageContent = {
     label: '# legal guide',
     h1: 'Anti-Squat Law in France: Prevention Guide for Property Owners',
     subtitle: 'Understand the landscape — then secure your property before risk escalates.',
-    image: pexelsImages.urbanFacade,
-    imageAlt: 'Urban residential facade in France',
+    image: heroImages.law,
+    imageAlt: 'Vacant property secured with a temporary anti-squat steel door',
     primaryCta: quoteCta,
   },
   sections: [
@@ -198,8 +198,8 @@ export const howItWorksEn: PageContent = {
     label: '# education',
     h1: 'How Anti-Squat Doors Work',
     subtitle: 'A clear explanation of what the door does — and what it does not replace.',
-    image: pexelsImages.emptyInterior,
-    imageAlt: 'Empty interior of vacant property',
+    image: heroImages.howItWorks,
+    imageAlt: 'Before and after anti-squat door installation in a vacant hallway',
     primaryCta: quoteCta,
   },
   sections: [
@@ -287,8 +287,8 @@ export const faqEn: PageContent = {
     label: '# faq',
     h1: 'Frequently Asked Questions',
     subtitle: 'Quick answers about our services, process, and coverage.',
-    image: pexelsImages.heroSecurity,
-    imageAlt: 'Secured property entrance',
+    image: heroImages.faq,
+    imageAlt: 'Anti-squat steel door protecting a vacant property entrance',
     primaryCta: quoteCta,
   },
   sections: [
@@ -350,8 +350,8 @@ export const certificationsEn: PageContent = {
     label: '# certifications',
     h1: 'Certifications and Standards Scope',
     subtitle: 'Honest scope — we distinguish certified components from configurable assemblies.',
-    image: pexelsImages.doorLock,
-    imageAlt: 'Certified lock hardware',
+    image: heroImages.certifications,
+    imageAlt: 'Lock hardware on an installed AlloPorte anti-squat door',
     primaryCta: { label: 'Technical Specifications', pageId: 'technical-specifications' },
   },
   sections: [

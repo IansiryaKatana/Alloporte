@@ -1,4 +1,4 @@
-import { pexelsImages, ctaImages } from '@/data/images'
+import { pexelsImages, ctaImages, heroImages } from '@/data/images'
 import type { PageContent } from '@/data/pages/types'
 
 const quoteCta = { label: 'Request a Quote', pageId: 'quote' as const }
@@ -16,8 +16,8 @@ export const homeEn: PageContent = {
     h1: 'Anti-Squat Doors and Access Protection for Vacant Properties',
     subtitle:
       'Physical barriers, controlled access, and documented handover for owners, landlords, and asset managers across France.',
-    image: pexelsImages.heroSecurity,
-    imageAlt: 'Secured door with heavy padlock on vacant property',
+    image: heroImages.home,
+    imageAlt: 'Anti-squat steel door installed in a vacant Parisian hallway',
     primaryCta: quoteCta,
     secondaryCta: techSheet,
   },
@@ -160,8 +160,8 @@ export const antiSquatDoorsEn: PageContent = {
     h1: 'Anti-Squat Doors for Vacant Property Protection',
     subtitle:
       'The strongest page for securing vacant assets — reinforced temporary doors with controlled access and documented installation.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Steel security door on concrete facade',
+    image: heroImages.antiSquat,
+    imageAlt: 'Steel anti-squat door installed on a vacant property facade',
     primaryCta: quoteCta,
   },
   sections: [

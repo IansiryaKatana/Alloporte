@@ -1,4 +1,6 @@
-export const HERO_SCROLL_FRAME_COUNT = 241
+export const HERO_SCROLL_START_FRAME = 96
+export const HERO_SCROLL_END_FRAME = 176
+export const HERO_SCROLL_FRAME_COUNT = HERO_SCROLL_END_FRAME - HERO_SCROLL_START_FRAME + 1
 export const HERO_SCROLL_POSTER = '/hero-scroll/poster.webp'
 export const HERO_SCROLL_FRAME_PREFIX = '/hero-scroll/ezgif-frame-'
 
@@ -15,7 +17,7 @@ export type HeroScrollPlayer = {
 }
 
 function frameUrl(index: number) {
-  return `${HERO_SCROLL_FRAME_PREFIX}${String(index).padStart(3, '0')}.webp`
+  return `${HERO_SCROLL_FRAME_PREFIX}${String(HERO_SCROLL_START_FRAME + index).padStart(3, '0')}.webp`
 }
 
 function loadImage(src: string) {
@@ -70,7 +72,7 @@ export function createHeroScrollVideo(canvas: HTMLCanvasElement): HeroScrollPlay
 
   const step = window.innerWidth < MOBILE_MAX_WIDTH ? 2 : 1
   const urls: string[] = []
-  for (let index = 1; index <= HERO_SCROLL_FRAME_COUNT; index += step) {
+  for (let index = 0; index < HERO_SCROLL_FRAME_COUNT; index += step) {
     urls.push(frameUrl(index))
   }
 

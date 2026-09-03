@@ -1,4 +1,4 @@
-import { caseStudyImages, ctaImages, pexelsImages } from '@/data/images'
+import { caseStudyImages, ctaImages, pexelsImages, heroImages } from '@/data/images'
 import type { PageContent, PagesByLocale } from '@/data/pages/types'
 
 const quoteCta = { label: 'Demander un devis', pageId: 'quote' as const }
@@ -16,8 +16,8 @@ const homeFr: PageContent = {
     h1: 'Portes anti-squat et protection des accès pour biens vacants',
     subtitle:
       'Barrières physiques, accès contrôlé et remise documentée pour propriétaires, bailleurs et gestionnaires d\'actifs en France.',
-    image: pexelsImages.heroSecurity,
-    imageAlt: 'Porte sécurisée avec cadenas lourd sur un bien vacant',
+    image: heroImages.home,
+    imageAlt: 'Porte anti-squat en acier installée dans un palier parisien vacant',
     primaryCta: quoteCta,
     secondaryCta: techSheet,
   },
@@ -161,8 +161,8 @@ const antiSquatDoorsFr: PageContent = {
     h1: 'Portes anti-squat pour la protection des biens vacants',
     subtitle:
       'La solution la plus robuste pour sécuriser vos actifs vacants — portes temporaires renforcées avec accès contrôlé et installation documentée.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Porte de sécurité en acier sur façade en béton',
+    image: heroImages.antiSquat,
+    imageAlt: 'Porte anti-squat en acier installée sur la façade d\'un bien vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -343,8 +343,8 @@ const steelDoorsFr: PageContent = {
     label: '# sécurité acier',
     h1: 'Portes de sécurité en acier temporaires pour biens vacants',
     subtitle: 'Barrières physiques très visibles pour biens vacants, chantiers de rénovation et expositions commerciales.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Porte en acier sur mur en béton',
+    image: heroImages.steelDoor,
+    imageAlt: 'Porte anti-squat temporaire boulonnée sur une ouverture vacante',
     primaryCta: quoteCta,
   },
   sections: [
@@ -445,8 +445,8 @@ const accessProtectionFr: PageContent = {
     label: '# accès entreprise',
     h1: 'Protection des accès pour biens vacants et sensibles',
     subtitle: 'Barrière physique + entrée contrôlée + processus documenté — adapté aux portefeuilles.',
-    image: pexelsImages.commercialUnit,
-    imageAlt: 'Façade d\'immeuble commercial',
+    image: heroImages.accessProtection,
+    imageAlt: 'Local commercial sécurisé par une porte anti-squat en acier',
     primaryCta: quoteCta,
   },
   sections: [
@@ -538,8 +538,8 @@ const keylessFr: PageContent = {
     label: '# accès intelligent',
     h1: 'Contrôle d\'accès sans clé pour ouvertures protégées',
     subtitle: 'Réduisez le risque de copie de clés. Ajoutez, retirez et limitez dans le temps les accès sur les biens vacants.',
-    image: pexelsImages.keylessAccess,
-    imageAlt: 'Interface de contrôle d\'accès numérique',
+    image: heroImages.keyless,
+    imageAlt: 'Porte anti-squat avec accès contrôlé sur une entrée de service',
     primaryCta: quoteCta,
   },
   sections: [
@@ -611,8 +611,8 @@ const pricingFr: PageContent = {
     label: '# guide des tarifs',
     h1: 'Tarifs et facteurs de coût des portes anti-squat',
     subtitle: 'Facteurs transparents derrière chaque devis — sans surprise cachée.',
-    image: pexelsImages.apartmentBlock,
-    imageAlt: 'Immeuble résidentiel',
+    image: heroImages.pricing,
+    imageAlt: 'Porte anti-squat en acier installée sur un bien urbain vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -691,8 +691,8 @@ const quoteFr: PageContent = {
     label: '# devis rapide',
     h1: 'Demander un devis',
     subtitle: 'Partagez photos, dimensions et ville — recevez une recommandation adaptée à votre site.',
-    image: pexelsImages.renovation,
-    imageAlt: 'Bien en attente de sécurisation',
+    image: heroImages.quote,
+    imageAlt: 'Porte anti-squat installée dans le palier d\'un immeuble vacant',
     primaryCta: { label: 'Contacter un conseiller', pageId: 'contact' },
   },
   sections: [
@@ -731,8 +731,8 @@ const contactFr: PageContent = {
     label: '# contact',
     h1: 'Contacter un conseiller en protection des accès',
     subtitle: 'Support bilingue français/anglais pour propriétaires, bailleurs et gestionnaires d\'actifs.',
-    image: pexelsImages.teamAdvisor,
-    imageAlt: 'Conseiller prêt à vous aider',
+    image: heroImages.contact,
+    imageAlt: 'Porte anti-squat en acier sécurisant l\'entrée d\'un bien vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -768,8 +768,8 @@ const techSpecsFr: PageContent = {
     label: '# spécifications',
     h1: 'Caractéristiques techniques, normes et périmètre de certification',
     subtitle: 'Documentation claire et honnête — ce qui est certifié par rapport à ce qui est configurable sur votre projet.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Détail d\'une porte de sécurité en acier',
+    image: heroImages.technical,
+    imageAlt: 'Cadre et serrure d\'une porte anti-squat installée sur une ouverture vacante',
     primaryCta: { label: 'Télécharger la fiche technique', pageId: 'quote' },
   },
   sections: [
@@ -853,8 +853,8 @@ const lawFr: PageContent = {
     label: '# guide juridique',
     h1: 'Loi anti-squat en France : guide de prévention pour propriétaires',
     subtitle: 'Comprenez le cadre juridique — puis sécurisez votre bien avant que le risque ne s\'aggrave.',
-    image: pexelsImages.urbanFacade,
-    imageAlt: 'Façade résidentielle urbaine en France',
+    image: heroImages.law,
+    imageAlt: 'Bien vacant sécurisé par une porte anti-squat temporaire en acier',
     primaryCta: quoteCta,
   },
   sections: [
@@ -953,8 +953,8 @@ const howItWorksFr: PageContent = {
     label: '# pédagogie',
     h1: 'Comment fonctionnent les portes anti-squat',
     subtitle: 'Une explication claire de ce que fait la porte — et ce qu\'elle ne remplace pas.',
-    image: pexelsImages.emptyInterior,
-    imageAlt: 'Intérieur vide d\'un bien vacant',
+    image: heroImages.howItWorks,
+    imageAlt: 'Avant/après installation d\'une porte anti-squat dans un palier vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -1042,8 +1042,8 @@ const faqFr: PageContent = {
     label: '# faq',
     h1: 'Questions fréquentes',
     subtitle: 'Réponses rapides sur nos services, notre processus et notre couverture.',
-    image: pexelsImages.heroSecurity,
-    imageAlt: 'Entrée d\'un bien sécurisé',
+    image: heroImages.faq,
+    imageAlt: 'Porte anti-squat en acier protégeant l\'entrée d\'un bien vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -1105,8 +1105,8 @@ const certificationsFr: PageContent = {
     label: '# certifications',
     h1: 'Certifications et périmètre des normes',
     subtitle: 'Périmètre honnête — nous distinguons les composants certifiés des assemblages configurables.',
-    image: pexelsImages.doorLock,
-    imageAlt: 'Matériel de serrure certifié',
+    image: heroImages.certifications,
+    imageAlt: 'Serrure d\'une porte anti-squat AlloPorte installée',
     primaryCta: { label: 'Caractéristiques techniques', pageId: 'technical-specifications' },
   },
   sections: [
@@ -1161,8 +1161,8 @@ const franceFr: PageContent = {
     label: '# national',
     h1: 'Portes anti-squat et protection des accès partout en France',
     subtitle: 'Déploiement prioritaire dans les grandes villes. Couverture nationale pour portefeuilles et biens ruraux.',
-    image: pexelsImages.franceMap,
-    imageAlt: 'Vue aérienne du paysage français',
+    image: heroImages.france,
+    imageAlt: 'Porte anti-squat en acier sécurisant un local commercial vacant en France',
     primaryCta: quoteCta,
   },
   sections: [
@@ -1216,7 +1216,7 @@ const franceFr: PageContent = {
       ctaLabel: 'Demander un devis',
       ctaPageId: 'quote',
       image: ctaImages.franceNationwide,
-      imageAlt: 'Skyline de Paris représentant la couverture France',
+      imageAlt: 'Porte anti-squat sécurisant un local commercial vacant en France',
     },
   ],
   internalLinks: [
@@ -1306,8 +1306,8 @@ const aboutFr: PageContent = {
     label: '# à propos',
     h1: 'À propos d\'AlloPorte',
     subtitle: 'Protection des biens vacants avec clarté technique et conseil bilingue.',
-    image: pexelsImages.teamAdvisor,
-    imageAlt: 'Équipe conseil AlloPorte',
+    image: heroImages.about,
+    imageAlt: 'Porte anti-squat AlloPorte installée dans le hall d\'un immeuble vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -1346,8 +1346,8 @@ const reviewsFr: PageContent = {
     label: '# avis',
     h1: 'Avis clients',
     subtitle: 'La confiance de propriétaires, bailleurs et gestionnaires d\'actifs partout en France.',
-    image: pexelsImages.testimonial,
-    imageAlt: 'Propriétaire satisfait',
+    image: heroImages.reviews,
+    imageAlt: 'Porte anti-squat protégeant un bien parisien vacant',
     primaryCta: quoteCta,
   },
   sections: [
@@ -1397,7 +1397,7 @@ const privacyFr: PageContent = {
   hero: {
     label: '# légal',
     h1: 'Politique de confidentialité',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Documentation juridique',
   },
   sections: [
@@ -1420,7 +1420,7 @@ const cookieFr: PageContent = {
   hero: {
     label: '# légal',
     h1: 'Politique cookies',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Politique cookies du site',
   },
   sections: [
@@ -1442,7 +1442,7 @@ const termsFr: PageContent = {
   hero: {
     label: '# légal',
     h1: 'Conditions générales',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Conditions générales',
   },
   sections: [
@@ -1464,7 +1464,7 @@ const legalNoticeFr: PageContent = {
   hero: {
     label: '# mentions légales',
     h1: 'Mentions légales',
-    image: pexelsImages.urbanFacade,
+    image: heroImages.legal,
     imageAlt: 'Mentions légales',
   },
   sections: [

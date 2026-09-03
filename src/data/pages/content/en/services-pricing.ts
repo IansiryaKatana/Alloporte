@@ -1,4 +1,4 @@
-import { pexelsImages, ctaImages } from '@/data/images'
+import { pexelsImages, ctaImages, heroImages } from '@/data/images'
 import type { PageContent } from '@/data/pages/types'
 
 const quoteCta = { label: 'Request a Quote', pageId: 'quote' as const }
@@ -13,8 +13,8 @@ export const steelDoorsEn: PageContent = {
     label: '# steel security',
     h1: 'Temporary Steel Security Doors for Vacant Properties',
     subtitle: 'High-visibility physical barriers for void properties, renovation sites, and commercial exposures.',
-    image: pexelsImages.steelDoor,
-    imageAlt: 'Steel door on concrete wall',
+    image: heroImages.steelDoor,
+    imageAlt: 'Temporary steel anti-squat door bolted onto a vacant opening',
     primaryCta: quoteCta,
   },
   sections: [
@@ -115,8 +115,8 @@ export const accessProtectionEn: PageContent = {
     label: '# enterprise access',
     h1: 'Access Protection for Vacant and Sensitive Properties',
     subtitle: 'Physical barrier + controlled entry + documented process — scaled for portfolios.',
-    image: pexelsImages.commercialUnit,
-    imageAlt: 'Commercial building facade',
+    image: heroImages.accessProtection,
+    imageAlt: 'Commercial unit secured with a steel anti-squat door',
     primaryCta: quoteCta,
   },
   sections: [
@@ -208,8 +208,8 @@ export const keylessEn: PageContent = {
     label: '# smart access',
     h1: 'Keyless Access Control for Protected Openings',
     subtitle: 'Reduce key-copying risk. Add, remove, and time-limit access on vacant assets.',
-    image: pexelsImages.keylessAccess,
-    imageAlt: 'Digital access control interface',
+    image: heroImages.keyless,
+    imageAlt: 'Anti-squat door with controlled lock access on a service entrance',
     primaryCta: quoteCta,
   },
   sections: [
@@ -281,8 +281,8 @@ export const pricingEn: PageContent = {
     label: '# cost guide',
     h1: 'Anti-Squat Door Pricing and Cost Factors',
     subtitle: 'Transparent factors behind every quote — no hidden surprises.',
-    image: pexelsImages.apartmentBlock,
-    imageAlt: 'Residential apartment block',
+    image: heroImages.pricing,
+    imageAlt: 'Installed anti-squat steel door on a vacant urban property',
     primaryCta: quoteCta,
   },
   sections: [
@@ -361,8 +361,8 @@ export const quoteEn: PageContent = {
     label: '# fast quote',
     h1: 'Request a Quote',
     subtitle: 'Share photos, dimensions, and city — receive a site-specific recommendation.',
-    image: pexelsImages.renovation,
-    imageAlt: 'Property awaiting securing',
+    image: heroImages.quote,
+    imageAlt: 'Anti-squat door installed in a vacant building hallway',
     primaryCta: { label: 'Contact advisor', pageId: 'contact' },
   },
   sections: [
@@ -401,8 +401,8 @@ export const contactEn: PageContent = {
     label: '# contact',
     h1: 'Contact an Access Protection Advisor',
     subtitle: 'Bilingual French/English support for owners, landlords, and asset managers.',
-    image: pexelsImages.teamAdvisor,
-    imageAlt: 'Advisor ready to assist',
+    image: heroImages.contact,
+    imageAlt: 'Steel anti-squat door securing a vacant building entrance',
     primaryCta: quoteCta,
   },
   sections: [

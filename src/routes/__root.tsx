@@ -8,8 +8,7 @@ import {
 } from '@tanstack/react-router'
 import appCss from '../styles/app.css?url'
 
-const heroImage =
-  'https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1600&q=85'
+import { HERO_SCROLL_POSTER } from '@/lib/hero-scroll-video'
 
 export const Route = createRootRoute({
   head: () => ({
@@ -27,9 +26,10 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: 'stylesheet', href: appCss },
-      { rel: 'preconnect', href: 'https://images.unsplash.com' },
+      { rel: 'icon', type: 'image/png', href: '/favicon.png' },
+      { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
       { rel: 'preconnect', href: 'https://images.pexels.com' },
-      { rel: 'preload', as: 'image', href: heroImage },
+      { rel: 'preload', as: 'image', href: HERO_SCROLL_POSTER },
     ],
   }),
   component: RootComponent,

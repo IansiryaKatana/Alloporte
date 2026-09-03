@@ -1,4 +1,4 @@
-import { pexelsImages, ctaImages } from '@/data/images'
+import { installImages } from '@/data/images'
 import type { CityContent } from '@/data/pages/types'
 
 type CityDef = {
@@ -12,8 +12,8 @@ type CityDef = {
 const cityDefs: Record<string, CityDef> = {
   paris: {
     name: { en: 'Paris', fr: 'Paris' },
-    image: pexelsImages.parisSkyline,
-    ctaImage: ctaImages.franceNationwide,
+    image: installImages.ornateHallway,
+    ctaImage: installImages.hallwayMailboxes,
     riskContext: {
       en: 'Paris has one of France\'s highest vacancy-risk profiles — dense housing stock, ground-floor exposure, and rapid occupation timelines in central arrondissements. International owners and probate properties are particularly vulnerable during void periods.',
       fr: 'Paris présente l\'un des profils de risque les plus élevés en France — parc dense, rez-de-chaussée exposés et délais d\'occupation rapides dans les arrondissements centraux. Les biens internationaux et successoraux sont particulièrement vulnérables.',
@@ -31,8 +31,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   marseille: {
     name: { en: 'Marseille', fr: 'Marseille' },
-    image: pexelsImages.marseilleHarbor,
-    ctaImage: pexelsImages.marseilleHarbor,
+    image: installImages.commercialFront,
+    ctaImage: installImages.storefront,
     riskContext: {
       en: 'Marseille\'s mix of commercial street frontage and residential voids creates dual risk — ground-floor units in the centre and port-adjacent neighbourhoods see regular occupation attempts on unsecured properties.',
       fr: 'Le mélange commercial et résidentiel à Marseille crée un double risque — les unités en rez-de-chaussée du centre et les quartiers proches du port connaissent des tentatives d\'occupation sur les biens non sécurisés.',
@@ -50,8 +50,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   lyon: {
     name: { en: 'Lyon', fr: 'Lyon' },
-    image: pexelsImages.lyonArchitecture,
-    ctaImage: pexelsImages.lyonSkyline,
+    image: installImages.alleyGraffiti,
+    ctaImage: installImages.brokenWoodAlley,
     riskContext: {
       en: 'Lyon\'s growing investor activity and renovation pipeline mean frequent void periods in Presqu\'île, Part-Dieu, and suburban stock. Housing providers managing multiple voids benefit from portfolio access plans.',
       fr: 'L\'activité investisseur et le pipeline de rénovation à Lyon génèrent des périodes de vacance fréquentes. Les bailleurs gérant plusieurs lots bénéficient de plans d\'accès portefeuille.',
@@ -69,8 +69,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   lille: {
     name: { en: 'Lille', fr: 'Lille' },
-    image: pexelsImages.lilleFrance,
-    ctaImage: pexelsImages.apartmentBlock,
+    image: installImages.hallwayMailboxes,
+    ctaImage: installImages.classicalLobby,
     riskContext: {
       en: 'Lille and the wider Hauts-de-France region see seasonal vacancy spikes around student housing turnover and cross-border investor properties. Quick securing between academic years is a common requirement.',
       fr: 'Lille et les Hauts-de-France connaissent des pics de vacance autour du turnover étudiant et des biens d\'investisseurs transfrontaliers. La sécurisation rapide entre les années universitaires est fréquente.',
@@ -88,8 +88,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   toulouse: {
     name: { en: 'Toulouse', fr: 'Toulouse' },
-    image: pexelsImages.renovation,
-    ctaImage: ctaImages.constructionSite,
+    image: installImages.exteriorMount,
+    ctaImage: installImages.wideOpening,
     riskContext: {
       en: 'Toulouse\'s aerospace-linked rental market and expanding suburbs create voids in both city-centre apartments and detached stock. New-build handover delays occasionally leave units unsecured pre-first-tenant.',
       fr: 'Le marché locatif lié à l\'aéronautique et l\'expansion périurbaine à Toulouse créent des vacances en centre-ville et en pavillons. Les retards de livraison neuf laissent parfois des lots non sécurisés.',
@@ -107,8 +107,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   nice: {
     name: { en: 'Nice', fr: 'Nice' },
-    image: pexelsImages.niceFrance,
-    ctaImage: pexelsImages.niceFrance,
+    image: installImages.serviceEntrance,
+    ctaImage: installImages.utilityDoor,
     riskContext: {
       en: 'Nice and the Côte d\'Azur attract international second-home owners with long absence periods. Seasonal voids and pre-sale securing are common — especially in condominiums with shared access points.',
       fr: 'Nice et la Côte d\'Azur attirent des résidences secondaires internationales avec de longues absences. Les vacances saisonnières et la sécurisation avant vente sont fréquentes — surtout en copropriété.',
@@ -126,8 +126,8 @@ const cityDefs: Record<string, CityDef> = {
   },
   bordeaux: {
     name: { en: 'Bordeaux', fr: 'Bordeaux' },
-    image: pexelsImages.bordeauxFrance,
-    ctaImage: pexelsImages.bordeauxFrance,
+    image: installImages.classicalLobby,
+    ctaImage: installImages.ornateHallway,
     riskContext: {
       en: 'Bordeaux\'s UNESCO centre and surrounding renovation zones produce void properties with heritage constraints. Careful survey of opening and frame conditions is essential before temporary door installation.',
       fr: 'Le centre UNESCO de Bordeaux et les zones de rénovation périphériques produisent des biens vacants avec contraintes patrimoniales. Un relevé soigneux de l\'ouverture est essentiel avant installation.',
@@ -165,7 +165,9 @@ export function buildCityContent(cityId: string, locale: 'en' | 'fr'): CityConte
       h1: isEn ? `Anti-Squat Doors in ${name}` : `Portes anti-squat à ${name}`,
       subtitle: def.riskContext[locale],
       image: def.image,
-      imageAlt: isEn ? `${name} property protection` : `Protection de biens à ${name}`,
+      imageAlt: isEn
+        ? `Anti-squat steel door installed on a vacant property in ${name}`
+        : `Porte anti-squat en acier installée sur un bien vacant à ${name}`,
       primaryCta: { label: isEn ? 'Request a Quote' : 'Demander un devis', pageId: 'quote' },
     },
     sections: [
